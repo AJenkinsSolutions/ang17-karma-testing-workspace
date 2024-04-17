@@ -9,9 +9,8 @@
         <table>
             <thead>
             <tr>
-                <th>jan</th>
-                <th>feb</th>
-                <th>mar</th>
+                <!-- Dynamically create a table header for each item in the 'headers' array -->
+      <th *ngFor="let header of headers">{{ header }}</th>
                 
             </tr>
             </thead>

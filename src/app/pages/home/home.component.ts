@@ -13,6 +13,14 @@ export class HomeComponent {
 
   // items: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] ; 
 
-  
+  headers: string[];
+
+  constructor() {
+    let currentDate = new Date();
+    this.headers = Array.from({ length: 3 }, (_, i) => {
+      let date = new Date(currentDate.getFullYear(), currentDate.getMonth() + i, 1);
+      return `${date.toLocaleString('default', { month: 'long' })} ${date.getFullYear()}`;
+    });
+  }
 
 }

@@ -21,10 +21,19 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should create the correct table headers', () => {
+  // it('should create the correct table headers', () => {
+  //   const tableHeaders = fixture.nativeElement.querySelectorAll('th');
+  //   expect(tableHeaders[0].textContent).toContain('jan');
+  //   expect(tableHeaders[1].textContent).toContain('feb');
+  //   expect(tableHeaders[2].textContent).toContain('mar');
+  // })
+
+  it('should have correct dynamic table headers', () => {
+    const expectedHeaders = component.headers;
     const tableHeaders = fixture.nativeElement.querySelectorAll('th');
-    expect(tableHeaders[0].textContent).toContain('jan');
-    expect(tableHeaders[1].textContent).toContain('feb');
-    expect(tableHeaders[2].textContent).toContain('mar');
-  })
+    expectedHeaders.forEach((header, index) => {
+      expect(tableHeaders[index].textContent).toContain(header);
+    });
+  });
+
 });
