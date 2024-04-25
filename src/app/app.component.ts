@@ -11,11 +11,12 @@ import { MatInputModule } from '@angular/material/input';
 import { SideBarSignal } from './shared/signals/sidebar.signal';
 import { ScreenSizeDirective } from './shared/directives/screen-size.directive';
 import { ScreenSizeSignal } from './shared/signals/screen-size.signal';
+import { TestOneComponent } from './test-one/test-one.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, HeaderComponent, FooterComponent, MatButtonModule, MatSidenavModule,ScreenSizeDirective,
+  imports: [TestOneComponent, CommonModule, RouterOutlet, RouterLink, HeaderComponent, FooterComponent, MatButtonModule, MatSidenavModule,ScreenSizeDirective,
     MatSidenavModule,
     MatCheckboxModule,
     MatFormFieldModule,

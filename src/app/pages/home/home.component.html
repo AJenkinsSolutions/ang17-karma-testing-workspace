@@ -1,5 +1,5 @@
 <!-- Global container -->
-<div class="max-w-4xl min-h-screen py-24 mx-auto bg-cyan-600">
+<div class="min-h-screen py-24 mx-auto bg-cyan-600">
     <h1 class="text-3xl text-center">Hero component</h1>
     
     <!-- Table container -->
@@ -9,25 +9,26 @@
         <table>
             <thead>
             <tr>
-                <!-- Dynamically create a table header for each item in the 'headers' array -->
-      <th *ngFor="let header of headers">{{ header }}</th>
+               
+               <ng-container>
+                <ng-container>
+                    @for(header of headers; track header){
+                        <th class="test"> {{header}}</th>
+                    }
+                    
+                </ng-container>
                 
+               </ng-container> <!-- Dynamically create a table header for each item in the 'headers' array -->
+                
+               
+
+                <th> help test</th>
             </tr>
             </thead>
             <tbody>
             <!-- Table data here -->
-            <!-- row 1  -->
-            <tr>
-                <td> test </td>
-                <td> test 2 </td>
-                <td> test 3</td>
-            </tr>
-            <!-- row 2  -->
-            <tr>
-                <td> test </td>
-                <td> test 2 </td>
-                <td> test 3</td>
-            </tr>
+
+            
             
             </tbody>
         </table>
